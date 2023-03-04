@@ -1,0 +1,64 @@
+main{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+}
+.collections{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.collections img{
+    width: 900px;
+}
+.collections .intro{
+    position: absolute;
+    color:black;
+    font-weight: 700;
+    font-size: 3rem;
+    top: 20%;
+    text-align: center;
+}
+.collections .intro span{
+    display: block;
+}
+.collections button{
+    height: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: transparent;
+    padding: 15px;
+    border-radius: 10px;
+    top: 50%;
+    font-weight: 700;
+    transition: .2s;
+}
+.collections button:hover{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+#next{
+    width: 15px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+.dots{
+    position: absolute;
+    display: flex;
+    top: 75%;
+}
+.dots p{
+    margin: 5px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+.dots .selected{
+    text-shadow: 0 0 5px white;
+    color: white;
+}
