@@ -21,6 +21,7 @@ function Nav(){
                 <p>new arrival</p>
                 <p>Men</p>
                 <p>women</p>
+                <p>Casual</p>
                 <p>brands</p>
             </div>
             <div className='user'>

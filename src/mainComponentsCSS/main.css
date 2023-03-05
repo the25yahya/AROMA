@@ -2,7 +2,7 @@
 @keyframes pulsate {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    80% { transform: scale(1); }
   }
 /*======================================*/
 
@@ -28,7 +28,7 @@ main{
     position: relative;
 }
 .collections img{
-    width: 1100px;
+    width: 1200px;
     border-radius: 10px;
     box-shadow: 0 0 2px rgb(158, 154, 154);
 }
@@ -105,6 +105,7 @@ main{
 .brands-holder img{
     width: 60px;
     margin-left: 100px;
+    cursor: pointer;
 }
 #adidas{
     width: 50px;
@@ -168,4 +169,179 @@ main{
     width: 250px;
     font-weight: 700;
     opacity: 50%;
+}
+/*currated picks---------------------------------*/
+.currated-picks{
+    margin-top: 80px;
+    margin-left: 5%;
+}
+.currated-holder{
+    display: flex;
+}
+.currated-picks h1{
+    margin-bottom: 30px;
+}
+.currated-holder div{
+    width: 300px;
+    position: relative;
+    margin-right: 20px;
+}
+.currated-holder div img{
+    width: 250px;
+    border-radius: 10px;
+}
+.currated-holder div button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    padding: 15px;
+    top: 75%;
+    height: 40px;
+    background-color: white;
+    width: 70%;
+    left: 5%;
+    border: transparent;
+    border-radius: 8px;
+    transition: .2s;
+}
+.currated-holder div button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+.currated-holder div button span{
+   font-size: 1.5rem;
+}
+
+.limited-offer{
+    align-self: center;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.limited-offer img{
+    width: 500px;
+    border-radius: 8px 0px 0px 8px;
+}
+.limited-offer .offer{
+    width: 500px;
+    border-radius: 0px 8px 8px 0px;
+}
+.offer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+.offer h1{
+    margin-left: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    opacity: 60%;
+}
+.offer p{
+    font-size: 2rem;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.offer button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    padding: 15px;
+    height: 40px;
+    background-color: white;
+    animation: pulsate infinite 1s ease-out;
+    width: 150px;
+    margin: 25px;
+    left: 5%;
+    border: transparent;
+    border-radius: 8px;
+    transition: .2s;
+}
+.offer button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    animation: 0s;
+    font-weight: 700;
+}
+
+/*news letter ----------------------------*/
+.newsletter{
+    margin-top: 50px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter h1{
+    font-size: 2rem;
+    font-weight: 650;
+    color: rgb(0, 0, 72);
+    text-align: center;
+}
+.newsletter h1 span{
+    display: block;
+}
+.newsletter-offer{
+    font-size: 1.2rem;
+    opacity: 60%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.newsletter div{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.newsletter div input{
+    width: 300px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: rgb(246, 246, 246);
+    border: transparent;
+    box-shadow: 0 0 1px grey;
+    height: 30px;
+    padding: 10px;
+}
+.newsletter div input::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.newsletter div button{
+    background-color: rgb(0, 0, 61);
+    color: white;
+    padding: 10px;
+    border: transparent;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+.newsletter div button:hover{
+    color: black;
+    background-color: transparent;
+}
+.newsletter-closure{
+    font-size: 1rem;
+    color: gray;
+    width: 300px;
+
+}
+.newsletter-closure span{
+    color: black;
+    opacity: 100%;
+    text-decoration: underline;
+    font-weight: 700;
 }

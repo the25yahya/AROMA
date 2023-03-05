@@ -14,7 +14,26 @@ import delivery from '../imgs/delivery.png'
 import arrival from '../imgs/cart.png'
 
 
-
+function Currated(props){
+  return(
+    <div className={props.className}>
+      <img src={props.img} />
+      <button>{props.description} <span>&#8594;</span></button>
+    </div>
+  )
+}
+function Limited(props){
+  return(
+    <div className='limited-offer'>
+     <img src={props.img} />
+     <div className='offer'>
+      <h1>LIMITED OFFER</h1>
+      <p>{props.offer}</p>
+      <button>Grab it now <span>&#8594;</span></button>
+     </div>
+    </div>
+  )
+}
 
 function Main(){
     return(
@@ -75,6 +94,44 @@ function Main(){
                   <p className='exp-title'>Fast & Free shipping</p>
                   <p className='exp-exp'>We offer fast and free shipping for our loyal customers</p>
                 </div>
+              </div>
+              <div className='currated-picks'>
+                  <h1>Currated picks</h1>
+               <div className='currated-holder'>
+                 <Currated 
+                  className='best-seller'
+                  img='https://img.freepik.com/premium-photo/woman-brown-beige-suit-corset-sunglasses-jacket-pants-white-background-bob-haircut_481253-1824.jpg?w=2000'
+                  description='Best Seller'
+                 />
+                 <Currated 
+                  className='shop-men'
+                  img='https://img.freepik.com/premium-photo/bearded-man-fashion-hairstyle-coat-studio-modern-style_163305-117480.jpg?w=2000'
+                  description='Shop Men'
+                 />
+                 <Currated 
+                  className='shop-women'
+                  img='https://img.freepik.com/premium-photo/woman-beige-brown-suit-pants-unbuttoned-seam-jacket-white-background-studio-shot_481253-2083.jpg'
+                  description='Shop Women'
+                 />
+                  <Currated 
+                  className='shop-casual'
+                  img='https://img.freepik.com/premium-photo/fashionable-man-attractive-woman-gray-background-couple-love-portrait_163305-65154.jpg?w=360'
+                  description='Shop Casual'
+                 />
+               </div>
+               <Limited 
+                img='https://img.freepik.com/premium-photo/skincare-concept-woman-with-makeup-face-skin-skincare-skincare-skin-treatment-skincare-cosmetics-products-beauty-lies-skin-deep_265223-67593.jpg?w=360'
+                offer='35% off only this friday and get special gift'
+               />
+               <div className='newsletter'>
+                 <h1>subscribe to our news letter to get updates <span>on our latest collections</span></h1>
+                 <p className='newsletter-offer'>Get 10% off on your first order just by subscribing to our newsletter !</p>
+                 <div>
+                   <input placeholder='Enter your email' type='email' />
+                   <button>Subscribe</button>
+                 </div>
+                 <p className='newsletter-closure'>You will be able to unsubscribe at any time.Read Our Privacy Policy <span>Here</span></p>
+               </div>
               </div>
             </div>
         </main>
