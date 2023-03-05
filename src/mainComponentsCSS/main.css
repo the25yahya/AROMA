@@ -1,6 +1,24 @@
+/*key frames*/
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+/*======================================*/
+
+
+
+
+
+
+
+
+
+
 main{
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 .collections{
@@ -10,13 +28,15 @@ main{
     position: relative;
 }
 .collections img{
-    width: 900px;
+    width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgb(158, 154, 154);
 }
 .collections .intro{
     position: absolute;
     color:black;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.5rem;
     top: 20%;
     text-align: center;
 }
@@ -24,6 +44,7 @@ main{
     display: block;
 }
 .collections button{
+    animation: pulsate infinite 1s ease-out;
     height: 40px;
     position: absolute;
     display: flex;
@@ -40,6 +61,7 @@ main{
     background-color: transparent;
     color: white;
     cursor: pointer;
+    animation: 0s;
 }
 #next{
     width: 15px;
@@ -61,4 +83,89 @@ main{
 .dots .selected{
     text-shadow: 0 0 5px white;
     color: white;
+}
+.left-right{
+    width: 100px;
+    height: 30px;
+}
+.left-right button i{
+    color: white;
+}
+
+.brands{
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.brands-holder{
+    margin-top: 20px;
+    margin-left: 12%;
+    display: flex;
+    align-items: center;
+}
+.brands-holder img{
+    width: 60px;
+    margin-left: 100px;
+}
+#adidas{
+    width: 50px;
+}
+#balenciaga{
+    width: 70px;
+}
+.brands h1{
+    margin-left: 10%;
+}
+
+
+/*=======================================*/
+.customer-exp{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.customer-exp-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 100px;
+}
+.intro1 span{
+    display: block;
+}
+
+.intro2{
+    margin-right: 100px;
+    height: 50px;
+    border-left: 3px black solid;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.intro2 p{
+    font-weight: 700;
+    opacity: 60%;
+}
+.customer-exp-exp{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.explanation img{
+    width: 30px;
+    margin-bottom: 10px;
+}
+.exp-title{
+    font-weight: 700;
+    color: rgb(0, 0, 82);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.exp-exp{
+    width: 250px;
+    font-weight: 700;
+    opacity: 50%;
 }
