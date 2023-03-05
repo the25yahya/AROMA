@@ -2,6 +2,7 @@ import react,{ useState } from 'react'
 import './App.css'
 import Nav from './mainComponents/nav'
 import Main from './mainComponents/main'
+import Footer from './footer'
 
 
 function Discount(){
@@ -18,6 +19,7 @@ function App() {
           <Discount />
           <Nav />
           <Main />
+          <Footer />
         </div>
     )
 }

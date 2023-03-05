@@ -1,0 +1,63 @@
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 249, 255);
+    align-items: center;
+    padding-bottom: 30px;
+}
+.footer-holder{
+    padding: 40px;
+    width: 90%;
+    display: flex;
+    border-bottom: 1px black solid;
+    justify-content: space-between;
+}
+
+.footer-holder div{
+    margin: 10px;
+}
+.footer-holder div h1{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.footer-holder div #aroma{
+    font-size: 2rem;
+}
+.footer-holder div img{
+    width: 40px;
+    margin: 3px;
+    cursor: pointer;
+}
+.footer-holder div .imgs{
+    display: flex;
+}
+.footer-holder div p{
+    font-weight: 600;
+    color: grey;
+    margin: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+.footer-holder div p:hover{
+    color: black;
+}
+.rights{
+    text-align: center;
+}
+#aromap{
+    width: 400px;
+    font-weight: 700;
+    opacity: 70%;
+    color: black;
+}
+.rights {
+    margin-top: 20px;
+}
+.rights p span{
+    font-weight: 700;
+}
+#paypal{
+    width: 70px;
+    margin-left: 10px;
+}
