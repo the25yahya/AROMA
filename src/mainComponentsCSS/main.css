@@ -405,7 +405,7 @@ main{
     .collections button{
         top: 70%;
     } 
-    .collections p{
+    .collections .intro{
         width: 600px;
     }   
     .brands-holder img{
@@ -415,5 +415,8 @@ main{
     .currated-holder div img{
         width: 180px;
     }
+}
+@media (max-width:700x) {
+
 }
 /*==========================*/
