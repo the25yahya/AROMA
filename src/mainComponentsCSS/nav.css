@@ -82,3 +82,17 @@ nav{
         cursor: pointer;
     }
 }
+@media (max-width:550px) {
+    nav .title{
+        margin-left: 0px;
+    }
+    nav input{
+        width:100px
+    }
+    .user{
+        margin-right:5px;
+    }
+    .discount p{
+        font-size: 12px;
+    }
+}

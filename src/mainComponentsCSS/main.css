@@ -224,11 +224,11 @@ main{
     justify-content: center;
 }
 .limited-offer img{
-    width: 500px;
+    width: 400px;
     border-radius: 8px 0px 0px 8px;
 }
 .limited-offer .offer{
-    width: 500px;
+    width: 400px;
     border-radius: 0px 8px 8px 0px;
 }
 .offer{
@@ -389,6 +389,31 @@ main{
         font-size: 15px;
         justify-content: space-between;
     }
+    .limited-offer{
+        display: none;
+    }
+    .limited-offer img{
+        width: 400px;
+        border-radius: 8px 0px 0px 8px;
+    }
+    .limited-offer .offer{
+        width: 300px;
+        border-radius: 0px 8px 8px 0px;
+    }
+}
+@media (max-width:910px) {
+ .currated-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 50px;
+ } 
+ .currated-holder div{
+    margin-top: 20px;
+ }  
+ .currated-holder div button{
+    width: 170px;
+ }
 }
 @media (max-width:800px) {
     .customer-exp-exp{
@@ -402,6 +427,9 @@ main{
     }
 }
 @media (max-width:750px) {
+    .currated-holder div button{
+        width: 150px;
+     }
     .collections button{
         top: 70%;
     } 
@@ -416,7 +444,40 @@ main{
         width: 180px;
     }
 }
-@media (max-width:700x) {
-
+@media (max-width:600px) {
+    .currated-holder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     } 
+}
+@media (max-width:550px) {
+    .newsletter{
+        padding: 30px;
+    }
+    .collections .intro{
+        font-size: 2.2rem;
+        width: 90%;
+    }
+    .brands-holder img{
+        width: 30px;
+        margin: 15px;
+    }
+    .customer-exp-intro{
+        justify-content: space-between;
+    }
+    .customer-exp-exp{
+        padding: 20px;
+    }
+    .customer-exp-exp div{
+        margin: 10px;
+    }
+    .customer-exp-exp .exp-title{
+        font-size: 15px;
+    }
+    .customer-exp-exp .exp-exp{
+        font-size: 13px;
+        width: 140px;
+    }
 }
 /*==========================*/
