@@ -3,6 +3,15 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+.bar{
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+  }
+.toggle{
+    display: none;
+}
 
 .title{
     display: flex;
@@ -61,4 +70,15 @@ nav{
     cursor: pointer;
     padding: 15px;
     height: 25px;
+}
+
+/*media queries*/
+@media (max-width:950px) {
+    .features{
+        display: none;
+    }
+    .toggle{
+        display: block;
+        cursor: pointer;
+    }
 }

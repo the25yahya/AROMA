@@ -79,7 +79,8 @@ function Main(){
                   <p className='exp-title'>Original Products</p>
                   <p className='exp-exp'>We provide money back guarantee if the product are not original</p>
                 </div>
-                <div className='explanation'>
+                <div
+                id='satisfaction' className='explanation'>
                   <img className='exp-img' src={happy} />
                   <p className='exp-title'>satisfaction Guarantee</p>
                   <p className='exp-exp'>Exchange the product you've purchased if it doesn't fit on you</p>

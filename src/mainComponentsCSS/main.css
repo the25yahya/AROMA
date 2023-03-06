@@ -189,6 +189,7 @@ main{
 .currated-holder div img{
     width: 250px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .currated-holder div button{
     display: flex;
@@ -345,3 +346,74 @@ main{
     text-decoration: underline;
     font-weight: 700;
 }
+
+
+/*media queries*/
+@media (max-width:1100px) {
+    .brands-holder{
+        margin-left: 30px;
+    }
+    .currated-holder div img{
+        width: 200px;
+    }
+    .customer-exp-exp div img{
+        width: 25px;
+    }
+    .customer-exp-exp div p{
+        width: 200px;
+    }
+    .aroma #aromap{
+        width: 250px;
+    }
+}
+@media (max-width:1000px) {
+    .brands-holder{
+        margin-left: 10px;
+        justify-content: center;
+    }
+    .brands-holder img{
+        margin: 30px;
+    }
+    .customer-exp-intro{
+        justify-content: center;
+    }
+    .customer-exp-intro .intro1{
+        font-size: 1.5rem;
+        margin-right: 50px;
+    }
+    .customer-exp-intro .intro2 p{
+        font-size: .9rem;
+    }
+    .currated-holder div button{
+        width: 80%;
+        font-size: 15px;
+        justify-content: space-between;
+    }
+}
+@media (max-width:800px) {
+    .customer-exp-exp{
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: 1fr  1fr;
+        padding: 20px;
+    }
+    .customer-exp-exp div {
+        margin: 20px;
+    }
+}
+@media (max-width:750px) {
+    .collections button{
+        top: 70%;
+    } 
+    .collections p{
+        width: 600px;
+    }   
+    .brands-holder img{
+        margin: 20px;
+        width: 50px;
+    }
+    .currated-holder div img{
+        width: 180px;
+    }
+}
+/*==========================*/

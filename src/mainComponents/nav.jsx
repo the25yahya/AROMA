@@ -30,6 +30,11 @@ function Nav(){
                 <img src={cart}/>
                 <img src={user}/>
             </div>
+            <div className='toggle'>
+              <div className='bar'></div>
+              <div className='bar'></div>
+              <div className='bar'></div> 
+            </div>
         </nav>
     )
 };
