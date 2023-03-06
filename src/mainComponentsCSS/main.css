@@ -4,6 +4,17 @@
     50% { transform: scale(1.1); }
     80% { transform: scale(1); }
   }
+  @keyframes slide {
+    0% {
+        transform: translateX(100%);
+      }
+      50% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(-200%) scaleX(-1);
+      }
+  }
 /*======================================*/
 
 
@@ -14,7 +25,12 @@
 
 
 
-
+.discount p{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slide 15s linear infinite;
+    transition: .1s;
+}
 main{
     margin-top: 30px;
     display: flex;
