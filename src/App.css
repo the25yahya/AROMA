@@ -20,4 +20,5 @@
 }
 .discount .sign{
     cursor: pointer;
+    text-decoration: underline;
 }

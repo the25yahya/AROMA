@@ -5,10 +5,15 @@ import letter from '../imgs/letter-o.png'
 import user from '../imgs/user.png'
 import cart from '../imgs/cart.png'
 
-function Nav(){
+function Nav(props){
+  function reloadApp() {
+    window.location.reload();
+  }
     return(
         <nav>
-            <div className='title'>
+            <div
+             onClick={reloadApp}
+             className='title'>
               <img 
                 src={logo}
               />

@@ -2,13 +2,28 @@ import react,{ useState } from 'react'
 import './mainComponentsCSS/footer.css'
 import visa from './imgs/visa.png'
 import paypal from './imgs/paypal.png'
+import logo from './imgs/wolf (3).png'
 import mastercard from './imgs/masercard.png'
 function Footer(){
+  function ScrollUp(){
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+}
     return(
     <footer> 
         <div className='footer-holder'>
            <div className='aroma'>
-              <h1 id='aroma'>AROMA</h1>
+              <h1
+              onClick={ScrollUp}
+               id='aroma'>
+              <img
+              className='logo'
+                src={logo}
+              />
+              AROMA</h1>
               <p id='aromap'>specializes in providing high quality, stylish product for your wardrobe</p>
             </div>
             <div className='shop'> 

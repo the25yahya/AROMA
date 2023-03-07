@@ -61,7 +61,9 @@ footer{
     width: 70px;
     margin-left: 10px;
 }
-
+#aroma{
+    cursor: pointer;
+}
 /*media queries*/
 @media (max-width:1200px) {
     .aroma #aromap{

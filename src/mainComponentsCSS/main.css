@@ -24,13 +24,6 @@
 
 
 
-
-.discount p{
-    white-space: nowrap;
-    overflow: hidden;
-    animation: slide 15s linear infinite;
-    transition: .1s;
-}
 main{
     margin-top: 30px;
     display: flex;
