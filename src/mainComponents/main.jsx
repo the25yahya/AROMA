@@ -44,12 +44,6 @@ function Main(){
               />
               <p className='intro'>level up your style with our    <span>summer collection</span></p>
               <button>shop now <img id='next' src={next} /></button>
-              <div className='dots'>
-                <p className='selected'>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-              </div>
               <div className='left-right'>
                 <button></button>
                 <button></button>

@@ -62,7 +62,8 @@ main{
     border: transparent;
     padding: 15px;
     border-radius: 10px;
-    top: 50%;
+    top: 75%;
+    margin-right: 40px;
     font-weight: 700;
     transition: .2s;
 }
