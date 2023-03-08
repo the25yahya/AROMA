@@ -26,7 +26,7 @@ function Nav(props){
                 <p onClick={props.onMainClick}>Home</p>
                 <p>new arrival</p>
                 <p onClick={props.onMenClick}>Men</p>
-                <p>women</p>
+                <p onClick={props.onWomenClick}>women</p>
                 <p>Casual</p>
                 <p>brands</p>
             </div>
