@@ -14,14 +14,49 @@ function Discount(){
 }
 
 function App() {
-    return(
-        <div className='container'>
-          <Discount />
-          <Nav />
-          <Main />
-          <Footer />
-        </div>
-    )
+    const [showMain, setShowMain] = useState(true);
+    const [showMen, setShowMen] = useState(false);
+    
+  const handleMainClick = () => {
+    setShowCart(false);
+    setShowMen(false);
+    setShowWomen(false);
+    setShowMain(true);
+  };
+  const handleMenClick = () => {
+    setShowCart(false);
+    setShowMen(true);
+    setShowWomen(false);
+    setShowMain(false);
+  };
+
+switch (true){
+    case showMain:
+        return(
+            <div className='container'>
+              <Discount />
+              <Nav 
+                onMainClick={handleMainClick}
+                onMenClick={handleMenClick}
+              />
+              <Main />
+              <Footer />
+            </div>
+        );
+    case showMen: 
+        return(
+            <div className='container'>
+              <Discount />
+              <Nav 
+                onMainClick={handleMainClick}
+                onMenClick={handleMenClick}
+              />
+              <Men />
+              <Footer />
+            </div>
+        );
+   
+}
 }
 
 export default App
