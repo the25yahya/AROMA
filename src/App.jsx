@@ -18,15 +18,11 @@ function App() {
     const [showMen, setShowMen] = useState(false);
     
   const handleMainClick = () => {
-    setShowCart(false);
     setShowMen(false);
-    setShowWomen(false);
     setShowMain(true);
   };
   const handleMenClick = () => {
-    setShowCart(false);
     setShowMen(true);
-    setShowWomen(false);
     setShowMain(false);
   };
 
