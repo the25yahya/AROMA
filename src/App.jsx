@@ -45,7 +45,11 @@ switch (true){
                 onMenClick={handleMenClick}
                 onWomenClick={handleWomenClick}
               />
-              <Main />
+              <Main 
+                onMainClick={handleMainClick}
+                onMenClick={handleMenClick}
+                onWomenClick={handleWomenClick}
+              />
               <Footer />
             </div>
         );
