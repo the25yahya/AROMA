@@ -2,6 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
 .navigation{
     width: 100%;
     display: flex;
@@ -70,6 +74,8 @@
 }
 
 
+/*media queries===================================================*/
+
 @media (max-width:1300px) {
     .products{
         padding-left: 100px;
@@ -130,3 +136,13 @@
         padding: 20px;
     }
 }
+
+/*key frames================================================================*/
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

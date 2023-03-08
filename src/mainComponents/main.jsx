@@ -37,7 +37,7 @@ function Limited(props){
 
 function Main(){
     return(
-        <main>
+        <main className='fade-in'>
             <div className='collections'>
               <img
                 src={summer}

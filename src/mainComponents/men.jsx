@@ -28,7 +28,7 @@ function Men(props){
         )
       })
     return(
-        <div className='men'>
+        <div className='men fade-in'>
            <div className='navigation'>
               <button>suits</button>
               <button>jeans</button>
