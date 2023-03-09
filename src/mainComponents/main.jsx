@@ -15,10 +15,13 @@ import arrival from '../imgs/cart.png'
 
 
 function Currated(props){
+  const handleClick = () => {
+    props.onClick();
+  }
   return(
     <div className={props.className}>
       <img src={props.img} />
-      <button>{props.description} <span>&#8594;</span></button>
+      <button onClick={handleClick} >{props.description} <span>&#8594;</span></button>
     </div>
   )
 }
@@ -35,7 +38,23 @@ function Limited(props){
   )
 }
 
-function Main(){
+function Main(props){
+  const handleMenClickAndScrollTop = () => {
+    props.onMenClick(); 
+    window.scrollTo(0, 0);
+  };
+  const handleCasualAndScrollTop = () =>{
+    props.onCasualClick(); 
+    window.scrollTo(0, 0);
+  }
+  const handleWomenAndScrollTop = () =>{
+    props.onWomenClick();
+    window.scrollTo(0, 0);
+  }
+  const handleNewArrivalAndScrollTop = () =>{
+    props.onNewArrivalClick();
+    window.scrollTo(0, 0);
+  }
     return(
         <main className='fade-in'>
             <div className='collections'>
@@ -94,24 +113,28 @@ function Main(){
                   <h1>Currated picks</h1>
                <div className='currated-holder'>
                  <Currated 
-                  className='best-seller'
+                  className='new Arrival'
                   img='https://img.freepik.com/premium-photo/woman-brown-beige-suit-corset-sunglasses-jacket-pants-white-background-bob-haircut_481253-1824.jpg?w=2000'
-                  description='Best Seller'
+                  description='new Arrival'
+                  onClick={() => handleNewArrivalAndScrollTop()}
                  />
                  <Currated 
                   className='shop-men'
                   img='https://img.freepik.com/premium-photo/bearded-man-fashion-hairstyle-coat-studio-modern-style_163305-117480.jpg?w=2000'
                   description='Shop Men'
+                  onClick={() => handleMenClickAndScrollTop()}
                  />
                  <Currated 
                   className='shop-women'
                   img='https://img.freepik.com/premium-photo/woman-beige-brown-suit-pants-unbuttoned-seam-jacket-white-background-studio-shot_481253-2083.jpg'
                   description='Shop Women'
+                  onClick={()=> handleWomenAndScrollTop() }
                  />
                   <Currated 
                   className='shop-casual'
                   img='https://img.freepik.com/premium-photo/fashionable-man-attractive-woman-gray-background-couple-love-portrait_163305-65154.jpg?w=360'
                   description='Shop Casual'
+                  onClick={()=> handleCasualAndScrollTop() }
                  />
                </div>
                <Limited 
