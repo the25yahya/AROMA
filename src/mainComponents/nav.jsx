@@ -15,10 +15,10 @@ function DropDown(props){
   return(
     <div className={dropdownClassname}>
                 <p onClick={props.onMainClick}>Home</p>
-                <p>new arrival</p>
+                <p onClick={props.onNewArrivalClick}>new arrival</p>
                 <p onClick={props.onMenClick}>Men</p>
                 <p onClick={props.onWomenClick}>women</p>
-                <p>Casual</p>
+                <p onClick={props.onCasualClick}>Casual</p>
                 <p>brands</p>
     </div>
   )
@@ -54,11 +54,11 @@ function Nav(props){
             </div>
             <div className='features'>
                 <p onClick={props.onMainClick}>Home</p>
-                <p>new arrival</p>
+                <p onClick={props.onNewArrivalClick}>new arrival</p>
                 <p 
                 onClick={props.onMenClick}>Men</p>
                 <p onClick={props.onWomenClick}>women</p>
-                <p>Casual</p>
+                <p onClick={props.onCasualClick}>Casual</p>
                 <p>brands</p>
             </div>
             <div className='user'>
@@ -73,6 +73,8 @@ function Nav(props){
                <div className='bar'></div> 
             </div>
             <DropDown 
+        onCasualClick={props.onCasualClick}    
+        onNewArrivalClick={props.onNewArrivalClick}    
         toggleDropDown ={toggleDropDown}
         onMenClick={props.onMenClick}
         onWomenClick={props.onWomenClick}

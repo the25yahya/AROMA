@@ -1,11 +1,17 @@
-import react,{ useState } from 'react'
-import '../mainComponentsCSS/men.css'
-import WomenenData from '../json-files/women.json';
+import react,{ useState } from 'react';
+import '../mainComponentsCSS/men.css';
 import Product from './product';
+import NewArrivalData from '../json-files/newArrival.json';
 
 
-function Women(props){
-    const WomenArray = WomenenData.map((item)=>{
+
+
+
+
+
+
+function NewArrival(props){
+    const NewArrivalArray = NewArrivalData.map((item)=>{
         return(
           <Product 
              key={item.id} 
@@ -19,17 +25,21 @@ function Women(props){
     return(
         <div className='men fade-in'>
            <div className='navigation'>
+              <button>suits</button>
+              <button>jeans</button>
+              <button>coats</button>
+              <button>waistcoats</button>
+              <button>pants</button>
               <button>Dresses</button>
               <button>Tops</button>
-              <button>jeans</button>
               <button>Petite</button>
               <button>SWIMWEAR</button>
            </div>
            <div className='products'>
-             {WomenArray}
+             {NewArrivalArray}
            </div>
         </div>
     )
 }
 
-export default Women;
+export default NewArrival;

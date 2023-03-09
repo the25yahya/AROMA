@@ -1,19 +1,8 @@
 import react,{ useState } from 'react'
 import '../mainComponentsCSS/men.css'
 import MenData from '../json-files/men.json';
+import Product from './product';
 
-function Product(props){
-    return(
-        <div className='product'>
-          <img
-            src={props.img1}
-          />
-          <h2 id='name'>{props.name}</h2>
-          <p id='price'>{props.price}</p>
-          <p id='tag'>{props.tag}</p>
-        </div>
-    )
-}
 
 function Men(props){
     const MenArray = MenData.map((item)=>{

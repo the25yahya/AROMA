@@ -1,11 +1,11 @@
-import react,{ useState } from 'react'
-import '../mainComponentsCSS/men.css'
-import WomenenData from '../json-files/women.json';
+import react,{ useState } from 'react';
+import '../mainComponentsCSS/men.css';
 import Product from './product';
+import CasualData from '../json-files/casual.json';
 
 
-function Women(props){
-    const WomenArray = WomenenData.map((item)=>{
+function Casual(props){
+    const CasualArray = CasualData.map((item)=>{
         return(
           <Product 
              key={item.id} 
@@ -19,17 +19,21 @@ function Women(props){
     return(
         <div className='men fade-in'>
            <div className='navigation'>
+              <button>suits</button>
+              <button>jeans</button>
+              <button>coats</button>
+              <button>waistcoats</button>
+              <button>pants</button>
               <button>Dresses</button>
               <button>Tops</button>
-              <button>jeans</button>
               <button>Petite</button>
               <button>SWIMWEAR</button>
            </div>
            <div className='products'>
-             {WomenArray}
+             {CasualArray}
            </div>
         </div>
     )
 }
 
-export default Women;
+export default Casual;
