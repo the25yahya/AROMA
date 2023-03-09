@@ -59,7 +59,7 @@ function Nav(props){
                 onClick={props.onMenClick}>Men</p>
                 <p onClick={props.onWomenClick}>women</p>
                 <p onClick={props.onCasualClick}>Casual</p>
-                <p>brands</p>
+                <p onClick={props.onBrandsClick}>brands</p>
             </div>
             <div className='user'>
                 <input placeholder='search'

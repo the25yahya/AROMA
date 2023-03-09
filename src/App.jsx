@@ -7,6 +7,7 @@ import Men from './mainComponents/men'
 import Women from './mainComponents/women'
 import NewArrival from './mainComponents/newArrival'
 import Casual from './mainComponents/casual'
+import Brands from './mainComponents/brands'
 
 function Discount(){
     return(
@@ -17,18 +18,28 @@ function Discount(){
 }
 
 function App() {
+    const [showBrands, setShowBrands] = useState(false);
     const [showCasual, setShowCasual] = useState(false);
     const [showMain, setShowMain] = useState(true);
     const [showMen, setShowMen] = useState(false);
     const [showWomen, setShowWomen] = useState(false);
     const [showNewArrival, setshowNewArrival] = useState(false)
     
+  const handleBrandsClick = () => {
+      setShowBrands(true);
+      setShowMen(false);
+      setShowMain(false);
+      setShowWomen(false);
+      setshowNewArrival(false);
+      setShowCasual(false);
+    };
   const handleMainClick = () => {
     setShowMen(false);
     setShowMain(true);
     setShowWomen(false);
     setshowNewArrival(false);
     setShowCasual(false);
+    setShowBrands(false);
   };
   const handleMenClick = () => {
     setShowMen(true);
@@ -36,6 +47,7 @@ function App() {
     setShowWomen(false);
     setshowNewArrival(false);
     setShowCasual(false);
+    setShowBrands(false);
   };
   const handleWomenClick= () =>{
     setShowMen(false);
@@ -43,6 +55,7 @@ function App() {
     setShowWomen(true);
     setshowNewArrival(false);
     setShowCasual(false);
+    setShowBrands(false);
   }
   const handleNewArrivalClick = ()=>{
     setShowMen(false);
@@ -50,6 +63,7 @@ function App() {
     setShowWomen(false);
     setshowNewArrival(true);
     setShowCasual(false);
+    setShowBrands(false);
   }
   const handleCasualClick = () =>{
     setShowMen(false);
@@ -57,6 +71,7 @@ function App() {
     setShowWomen(false);
     setshowNewArrival(false);
     setShowCasual(true);
+    setShowBrands(false);
   }
 switch (true){
     case showMain:
@@ -64,6 +79,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+                onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
                 onMenClick={handleMenClick}
                 onWomenClick={handleWomenClick}
@@ -85,6 +101,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+                onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
                 onMenClick={handleMenClick}
                 onWomenClick={handleWomenClick}
@@ -100,6 +117,7 @@ switch (true){
           <div className='container'>
             <Discount />
             <Nav 
+            onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
             onWomenClick={handleWomenClick}
@@ -115,6 +133,7 @@ switch (true){
           <div>
             <Discount />
             <Nav 
+            onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
             onWomenClick={handleWomenClick}
@@ -124,12 +143,13 @@ switch (true){
             <NewArrival />
             <Footer />
           </div>
-        )  
+        );
     case showCasual:
         return(
           <div>
             <Discount />
             <Nav 
+            onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
             onWomenClick={handleWomenClick}
@@ -139,7 +159,23 @@ switch (true){
             <Casual />
             <Footer />
           </div>
-        )       
+        );
+    case showBrands:  
+       return(
+        <div>
+        <Discount />
+        <Nav 
+        onBrandsClick={handleBrandsClick}
+        onMainClick={handleMainClick}
+        onMenClick={handleMenClick}
+        onWomenClick={handleWomenClick}
+        onNewArrivalClick={handleNewArrivalClick}
+        onCasualClick={handleCasualClick}
+        />
+        <Brands />
+        <Footer />
+      </div>
+       );         
    
 }
 }

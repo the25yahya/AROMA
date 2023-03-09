@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Jordan Flight Fleece",
+        "brand": "nike",
+        "price": "$85.00",
+        "img1":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3a566173-2e1c-407f-9768-680f105b9bd2/sportswear-phoenix-fleece-oversized-crew-neck-sweatshirt-cn7PsL.png",
+        "img2":"https://static.nike.com/a/images/t_default/22c71650-bf12-44e5-b827-00a7f98e7e83/jordan-flight-fleece-mens-pants-5Dc1F7.png",
+        "img3":"https://static.nike.com/a/images/t_default/2e64dd8c-4886-4297-aa55-80146d881d9a/jordan-flight-fleece-mens-pants-5Dc1F7.png",
+        "img4":"https://static.nike.com/a/images/t_default/98618199-735b-4252-8d10-71614ceff1dc/jordan-flight-fleece-mens-pants-5Dc1F7.png",
+        "description": "",
+        "type":"",
+        "tag":"Nike",
+        "id":"1"
+    }
+]
