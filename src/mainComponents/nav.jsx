@@ -14,6 +14,7 @@ function DropDown(props){
   const dropdownClassname = `dropdown ${props.isOpen ? 'open' : 'show'}`;
   return(
     <div className={dropdownClassname}>
+                <h1>menu</h1>
                 <p onClick={props.onMainClick}>Home</p>
                 <p onClick={props.onNewArrivalClick}>new arrival</p>
                 <p onClick={props.onMenClick}>Men</p>

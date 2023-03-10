@@ -9,10 +9,10 @@ nav{
     display: none;
     position: absolute;
     right: 10%;
-    width: 300px;
+    width: 100%;
     padding: 10px;
     position: absolute;
-    background-color: #FFFFFD;
+    background-color: #ffffed;
     box-shadow: 0 0 5px grey;
     z-index: 200;
     top: 100%;
@@ -20,13 +20,20 @@ nav{
     border-radius: 15px 0 0 0;
     right: 0%;
     padding-top: 20px;
+    text-align: center;
   }
   .dropdown P{
-    margin: 20px;
+    margin-bottom: 20px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
     transition: .1s;
+  }
+  .dropdown h1{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   .dropdown p span{
     font-weight: 999;
