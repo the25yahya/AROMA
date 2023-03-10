@@ -41,6 +41,9 @@
 .products .product{
     margin: 15px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .products .product img{
     width: 300px;
@@ -50,6 +53,8 @@
     max-width:300px;
     font-size: 15px;
     font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .product #tag{
     position: absolute;
@@ -96,8 +101,9 @@
     }
     .products .product h2{
         font-size: 15px;
-        margin: 10px;
-        width: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
     }
     .product #tag{
         top: 60%;
