@@ -13,6 +13,9 @@ function Women(props){
              tag={item.tag}
              name={item.name}
              price={item.price}
+             img2={item.img2}
+             img3={item.img3}
+             img4={item.img4}
           />
         )
       })
