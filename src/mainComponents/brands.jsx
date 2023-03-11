@@ -26,13 +26,16 @@ const NikeArray = NikeData.map((item)=>{
   })   
   const AllArray = AllData.map((item)=>{
     return(
-        <Product 
-           key={item.id} 
-           img1={item.img1}
-           tag={item.tag}
-           name={item.name}
-           price={item.price}
-        />
+      <Product 
+      key={item.id} 
+      img1={item.img1}
+      tag={item.tag}
+      name={item.name}
+      price={item.price}
+      img2={item.img2}
+      img3={item.img3}
+      img4={item.img4}
+   />
       )
     })
 
