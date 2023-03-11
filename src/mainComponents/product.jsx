@@ -11,6 +11,7 @@ import react,{ useState } from 'react'
 function Product(props){
   const [fade, setfade] = useState(false);
   const [imgSrc, setImgSrc] = useState(props.img1);
+  const [showButton, setShowButton] = useState(false);
   const handleMouseEnter = () => {
     setImgSrc(props.img2);
     setfade(true);
