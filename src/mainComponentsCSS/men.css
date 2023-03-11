@@ -78,28 +78,7 @@
     font-weight: 700;
     color: rgb(0, 0, 63);
 }
-.to-cart{
-    background-color: transparent;
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    color: #2D2D2D;
-    font-size: 12px;
-    background-color: #FFFFFFCC;
-    padding: 5px;
-    display: none;
-}
-.show{
-    display: block;
-    background-color: transparent;
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    color: #2D2D2D;
-    font-size: 12px;
-    background-color: #FFFFFFCC;
-    padding: 5px;
-}
+
 
 /*media queries===================================================*/
 
