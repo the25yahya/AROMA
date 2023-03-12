@@ -8,6 +8,7 @@ function Casual(props){
     const CasualArray = CasualData.map((item)=>{
         return(
           <Product 
+          addToCart={props.addToCart} 
           key={item.id} 
           img1={item.img1}
           tag={item.tag}

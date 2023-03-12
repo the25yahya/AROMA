@@ -13,6 +13,7 @@ import LevisData from '../json-files/brands/levis.json';
 const NikeArray = NikeData.map((item)=>{
   return(
     <Product 
+    addToCart={props.addToCart} 
     key={item.id} 
     img1={item.img1}
     tag={item.tag}
@@ -27,6 +28,7 @@ const NikeArray = NikeData.map((item)=>{
   const AllArray = AllData.map((item)=>{
     return(
       <Product 
+      addToCart={props.addToCart} 
       key={item.id} 
       img1={item.img1}
       tag={item.tag}
@@ -42,8 +44,10 @@ const NikeArray = NikeData.map((item)=>{
     const AddidasArray = AddidasData.map((item)=>{
       return(
           <Product 
+          addToCart={props.addToCart} 
              key={item.id} 
              img1={item.img1}
+             img2={item.img2}
              tag={item.tag}
              name={item.name}
              price={item.price}
@@ -54,8 +58,10 @@ const NikeArray = NikeData.map((item)=>{
       const GucciArray = GucciData.map((item)=>{
         return(
             <Product 
+            addToCart={props.addToCart} 
                key={item.id} 
                img1={item.img1}
+               img2={item.img2}
                tag={item.tag}
                name={item.name}
                price={item.price}
@@ -66,8 +72,10 @@ const NikeArray = NikeData.map((item)=>{
         const LevisArray = LevisData.map((item)=>{
           return(
               <Product 
+              addToCart={props.addToCart} 
                  key={item.id} 
                  img1={item.img1}
+                 img2={item.img2}
                  tag={item.tag}
                  name={item.name}
                  price={item.price}
@@ -77,9 +85,11 @@ const NikeArray = NikeData.map((item)=>{
 
           const BalenciagaArray = BalenciagaData.map((item)=>{
             return(
-                <Product 
+                <Product
+                 addToCart={props.addToCart} 
                    key={item.id} 
                    img1={item.img1}
+                   img2={item.img2}
                    tag={item.tag}
                    name={item.name}
                    price={item.price}

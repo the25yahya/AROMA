@@ -8,6 +8,10 @@
 .cart .warning{
     margin-bottom: 40px;
 }
+#home span{
+    color: magenta;
+    font-weight: 700;
+}
 /*=======================*/
 
 
@@ -19,7 +23,7 @@
 
 
 .delivery-info{
-    margin-top: 50px;
+    margin-top: 100px;
     grid-area: delivery-alias;
     display: flex;
     flex-direction: column;
@@ -72,6 +76,7 @@
 }
 .item div{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 80px;
     margin-right: 50px
@@ -84,6 +89,9 @@
     padding-right: 5px;
     border: 1px solid grey;
     border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .item div .minus{
     border: transparent;
@@ -95,5 +103,26 @@
     border: transparent;
     font-size: 20px;
     font-weight: 700;
+    cursor: pointer;
+}
+.products-summary{
+    margin: 30px;
+    margin-bottom: 80px;
+}
+#checkout{
+    margin-left: 20%;
+    width: 150px;
+    padding: 5px;
+    background-color: red;
+    border: transparent;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: .2s;
+}
+#checkout:hover{
+    color: black;
+    background-color: transparent;
     cursor: pointer;
 }

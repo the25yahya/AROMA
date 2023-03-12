@@ -92,10 +92,13 @@ function Cart(props){
 if(props.items.length>0){
   return(
       <div className='cart'>
-          <p>home/<span id='cart'>cart</span></p>
+          <p id='home'>home/<span id='cart'>cart</span></p>
           <div className='products-summary'>
            {products}
           </div>
+          <DelieryInfo
+          />
+          <button id='checkout'>checkout</button>
       </div>
   )
 }else return(
