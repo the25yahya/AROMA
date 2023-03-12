@@ -70,7 +70,6 @@ function handleBrandsAndScroll(){
 
 
 function Nav(props){
-console.log(props.items);
   /////////////////////////
   const [isDropDownOpen, setIsDropDownOpen] = useState(true);
   const toggleDropDown = () => {

@@ -39,19 +39,34 @@ function Summary(){
     </div>
   )
 }
-
+function Warning(){
+  return(
+    <h1>
+      your cart is currently empty
+    </h1>
+  )
+}
 
 
 
 function Cart(props){
-    return(
-        <div className='cart'>
-            <p>home/Cart</p>
-            <div className='products-summary'>
+if(props.items.length>0){
+  return(
+      <div className='cart'>
+          <p>home/Cart</p>
+          <div className='products-summary'>
 
-            </div>
-        </div>
-    )
+          </div>
+      </div>
+  )
+}else return(
+  <div>
+    <div className='cart'>
+          <p>home/Cart</p>
+          <Warning/>
+      </div>
+  </div>
+)
 };
 
 export default Cart;
