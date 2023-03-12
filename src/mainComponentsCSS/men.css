@@ -34,12 +34,12 @@
 }
 .products{
     display: flex;
-    padding-left: 90px;
+    padding-left: 30px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 .products .product{
-    margin: 20px;
+    margin: 15px;
     position: relative;
     display: flex;
     flex-direction: column;
