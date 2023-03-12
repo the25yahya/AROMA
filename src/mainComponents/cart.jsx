@@ -1,20 +1,47 @@
 import react,{ useState } from 'react'
 import '../mainComponentsCSS/cart.css'
 
+function DelieryInfo(props){
+  return(
+    <div className='delivery-info'>
+    <h1>delivery information</h1>
+      <div className='name'>
+        <p>name</p>
+        <input type="text" placeholder='your name'/>
+      </div>
+      <div className='mobile-number'>
+        <p>mobile number</p>
+        <input type="text" placeholder='your number'/>
+      </div>
+      <div className='email'>
+        <p>email</p>
+        <input type="email" placeholder='email'/>
+      </div>
+      <div className='city'>
+        <p>city</p>
+        <input type="text" placeholder='hometown'/>
+      </div>
+      <div className='adress'>
+        <p>adress</p>
+        <input type="text" placeholder='your adress'/>
+      </div>
+    </div>
+  )
+}
 
-function Products(){
+function Product(props){
     return(
-        <div className='products'>
+        <div className='item'>
           <img
-            src='https://images.asos-media.com/products/topshop-denim-cropped-shirt-in-authentic-blue/204164550-2?$n_480w$&wid=476&fit=constrain'
+            src={props.img}
           />
-          <p className='name'>denim cropped tshirt</p>
+          <p className='name'>{props.name}</p>
           <div>
-            <button>-</button>
-            <button>1</button>
-            <button>+</button>
+            <button className='minus'>-</button>
+            <button className='quantity'>1</button>
+            <button className='plus'>+</button>
           </div>
-          <p>80$</p>
+          <p className='price'>{props.price}</p>
         </div>
     )
 }
@@ -41,7 +68,7 @@ function Summary(){
 }
 function Warning(){
   return(
-    <h1>
+    <h1 className='warning'>
       your cart is currently empty
     </h1>
   )
@@ -50,22 +77,33 @@ function Warning(){
 
 
 function Cart(props){
+
+ let products = props.items.map((product,index)=>{
+    return(
+      <Product
+      key={product.id || index}
+      name={product.name}
+      img={product.img1}
+      price={product.price}
+      />
+    )
+  })
+
 if(props.items.length>0){
   return(
       <div className='cart'>
-          <p>home/Cart</p>
+          <p>home/<span id='cart'>cart</span></p>
           <div className='products-summary'>
-
+           {products}
           </div>
       </div>
   )
 }else return(
-  <div>
     <div className='cart'>
-          <p>home/Cart</p>
+         <p id='home'>home/<span id='cart'>cart</span></p>
           <Warning/>
+          <DelieryInfo />
       </div>
-  </div>
 )
 };
 
