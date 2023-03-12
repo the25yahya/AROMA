@@ -39,7 +39,7 @@
     margin-top: 30px;
 }
 .products .product{
-    margin: 15px;
+    margin: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,15 @@
     font-weight: 700;
     color: rgb(0, 0, 63);
 }
-
+.product div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.product div #cart{
+    width: 20px;
+}
 
 /*media queries===================================================*/
 

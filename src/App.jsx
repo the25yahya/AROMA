@@ -8,6 +8,7 @@ import Women from './mainComponents/women'
 import NewArrival from './mainComponents/newArrival'
 import Casual from './mainComponents/casual'
 import Brands from './mainComponents/brands'
+import Cart from './mainComponents/cart'
 
 function Discount(){
     return(
@@ -18,6 +19,7 @@ function Discount(){
 }
 
 function App() {
+    const [showCart, setShowCart] = useState(false);
     const [showBrands, setShowBrands] = useState(false);
     const [showCasual, setShowCasual] = useState(false);
     const [showMain, setShowMain] = useState(true);
@@ -25,6 +27,8 @@ function App() {
     const [showWomen, setShowWomen] = useState(false);
     const [showNewArrival, setshowNewArrival] = useState(false)
     
+
+
   const handleBrandsClick = () => {
       setShowBrands(true);
       setShowMen(false);
@@ -32,7 +36,17 @@ function App() {
       setShowWomen(false);
       setshowNewArrival(false);
       setShowCasual(false);
+      setShowCart(false);
     };
+  const handleCartClick = () => {
+      setShowCart(true);
+      setShowBrands(false);
+      setShowMen(false);
+      setShowMain(false);
+      setShowWomen(false);
+      setshowNewArrival(false);
+      setShowCasual(false);
+    }; 
   const handleMainClick = () => {
     setShowMen(false);
     setShowMain(true);
@@ -40,6 +54,7 @@ function App() {
     setshowNewArrival(false);
     setShowCasual(false);
     setShowBrands(false);
+    setShowCart(false);
   };
   const handleMenClick = () => {
     setShowMen(true);
@@ -48,6 +63,7 @@ function App() {
     setshowNewArrival(false);
     setShowCasual(false);
     setShowBrands(false);
+    setShowCart(false);
   };
   const handleWomenClick= () =>{
     setShowMen(false);
@@ -56,6 +72,7 @@ function App() {
     setshowNewArrival(false);
     setShowCasual(false);
     setShowBrands(false);
+    setShowCart(false);
   }
   const handleNewArrivalClick = ()=>{
     setShowMen(false);
@@ -64,6 +81,7 @@ function App() {
     setshowNewArrival(true);
     setShowCasual(false);
     setShowBrands(false);
+    setShowCart(false);
   }
   const handleCasualClick = () =>{
     setShowMen(false);
@@ -72,6 +90,7 @@ function App() {
     setshowNewArrival(false);
     setShowCasual(true);
     setShowBrands(false);
+    setShowCart(false);
   }
 switch (true){
     case showMain:
@@ -79,6 +98,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+                onCartClick={handleCartClick}
                 onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
                 onMenClick={handleMenClick}
@@ -87,6 +107,7 @@ switch (true){
                 onCasualClick={handleCasualClick}
               />
               <Main 
+                onCartClick={handleCartClick}
                 onMainClick={handleMainClick}
                 onMenClick={handleMenClick}
                 onWomenClick={handleWomenClick}
@@ -101,6 +122,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+                onCartClick={handleCartClick}
                 onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
                 onMenClick={handleMenClick}
@@ -117,6 +139,7 @@ switch (true){
           <div className='container'>
             <Discount />
             <Nav 
+             onCartClick={handleCartClick}
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
@@ -130,9 +153,10 @@ switch (true){
         ); 
     case showNewArrival:
         return(
-          <div>
+          <div className='container'>
             <Discount />
             <Nav 
+            onCartClick={handleCartClick}   
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
@@ -146,9 +170,10 @@ switch (true){
         );
     case showCasual:
         return(
-          <div>
+          <div className='container'>
             <Discount />
             <Nav 
+            onCartClick={handleCartClick}
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
             onMenClick={handleMenClick}
@@ -162,9 +187,10 @@ switch (true){
         );
     case showBrands:  
        return(
-        <div>
+        <div className='container'>
         <Discount />
         <Nav 
+        onCartClick={handleCartClick}
         onBrandsClick={handleBrandsClick}
         onMainClick={handleMainClick}
         onMenClick={handleMenClick}
@@ -175,7 +201,24 @@ switch (true){
         <Brands />
         <Footer />
       </div>
-       );         
+       ); 
+        case showCart:
+          return(
+            <div className='container'>
+              <Discount />
+              <Nav 
+              onCartClick={handleCartClick}
+              onBrandsClick={handleBrandsClick}
+              onMainClick={handleMainClick}
+              onMenClick={handleMenClick}
+              onWomenClick={handleWomenClick}
+              onNewArrivalClick={handleNewArrivalClick}
+              onCasualClick={handleCasualClick}
+               />
+              <Cart />
+              <Footer />
+            </div>
+          )       
    
 }
 }

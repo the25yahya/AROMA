@@ -1,5 +1,5 @@
 import react,{ useState } from 'react'
-
+import cart from '../imgs/cart.png'
 
 
 
@@ -20,6 +20,18 @@ function Product(props){
     setImgSrc(props.img1);
     setfade(false);
   }
+  const handleClick = () => {
+    const productData = {
+      name: props.name,
+      price: props.price,
+      tag: props.tag,
+      img1: props.img1,
+      img2: props.img2,
+    };
+    // Pass the productData to a callback function that handles adding the item to the cart
+    //props.onAddToCart(productData);
+    console.log(productData);
+  };
     return(
         <div className='product'>
           <img
@@ -29,7 +41,14 @@ function Product(props){
             onMouseLeave={handleMouseLeave}
           />
           <h2 id='name'>{props.name}</h2>
+          <div>
           <p id='price'>{props.price}</p>
+          <img
+            onClick={handleClick}
+            id='cart'
+            src={cart}
+          />
+          </div>
           <p id='tag'>{props.tag}</p>
         </div>
     )

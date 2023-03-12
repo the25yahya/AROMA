@@ -108,7 +108,9 @@ function Nav(props){
             <div className='user'>
                 <input placeholder='search'
                  type="search"/>
-                <img src={cart}/>
+                <img
+                onClick={props.onCartClick}
+                 src={cart}/>
                 <img src={user}/>
             </div>
             <div onClick={() => {toggleDropDown(); toggleX();}} className='toggle'>
