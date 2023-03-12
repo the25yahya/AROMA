@@ -92,6 +92,13 @@ function App() {
     setShowBrands(false);
     setShowCart(false);
   }
+  //cart js////////////////
+  const [cartItems, setCartItems] = useState([]);
+  const handleAddToCart = (item) => {
+    setCartItems((prevItems) => [...prevItems, item]);
+  };
+  console.log(cartItems,'cart');
+  /////////////////////
 switch (true){
     case showMain:
         return(
@@ -130,7 +137,7 @@ switch (true){
                 onNewArrivalClick={handleNewArrivalClick}
                 onCasualClick={handleCasualClick}
               />
-              <Men />
+              <Men onAddToCart={handleAddToCart}/>
               <Footer />
             </div>
         );
@@ -215,7 +222,7 @@ switch (true){
               onNewArrivalClick={handleNewArrivalClick}
               onCasualClick={handleCasualClick}
                />
-              <Cart />
+              <Cart items={cartItems}/>
               <Footer />
             </div>
           )       

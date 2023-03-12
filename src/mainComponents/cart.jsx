@@ -19,6 +19,27 @@ function Products(){
     )
 }
 
+function Summary(){
+  return(
+    <div className='summary'>
+      <h1>Summary</h1>
+      <div className='order total'>
+       <p>Order total</p>
+       <p>300$</p>
+      </div>
+      <div className='Shipping'>
+       <p>Shipping</p>
+       <p>50$</p>
+      </div>
+      <div className='subtotal'>
+       <p>Subtotal</p>
+       <p>1000$</p>
+      </div>
+      <button>CHECKOUT</button>
+    </div>
+  )
+}
+
 
 
 
