@@ -5,11 +5,10 @@ import Product from './product';
 
 
 function Men(props){
-  console.log(props.onAddToCart);
     const MenArray = MenData.map((item)=>{
         return(
           <Product 
-             onAddToCart={props.onAddToCart} 
+             addToCart={props.addToCart} 
              key={item.id} 
              img1={item.img1}
              tag={item.tag}

@@ -70,6 +70,8 @@ function handleBrandsAndScroll(){
 
 
 function Nav(props){
+console.log(props.items);
+  /////////////////////////
   const [isDropDownOpen, setIsDropDownOpen] = useState(true);
   const toggleDropDown = () => {
     setIsDropDownOpen(prevState => !prevState);
@@ -108,9 +110,12 @@ function Nav(props){
             <div className='user'>
                 <input placeholder='search'
                  type="search"/>
-                <img
+                 <div className='on'>
+                 <p className={props.items.length > 0 ? 'on' : 'off'}>.</p>
+                 <img
                 onClick={props.onCartClick}
                  src={cart}/>
+                 </div>
                 <img src={user}/>
             </div>
             <div onClick={() => {toggleDropDown(); toggleX();}} className='toggle'>

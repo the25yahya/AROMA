@@ -20,7 +20,7 @@ function Product(props){
     setImgSrc(props.img1);
     setfade(false);
   }
-  const handleAddToCart = () => {
+  const handleClick = () => {
     const item = {
       name: props.name,
       price: props.price,
@@ -30,8 +30,7 @@ function Product(props){
     };
     // Pass the productData to a callback function that handles adding the item to the cart
     //props.onAddToCart(item);
-    console.log(item);
-    props.handleAddToCart(item);
+    props.addToCart(item);
   };
     return(
         <div className='product'>
@@ -45,7 +44,7 @@ function Product(props){
           <div>
           <p id='price'>{props.price}</p>
           <img
-            onClick={handleAddToCart}
+            onClick={handleClick}
             id='cart'
             src={cart}
           />

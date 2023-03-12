@@ -167,3 +167,17 @@ nav{
       transform-origin: top right;
     }
   }
+  .on{
+    position: relative;
+  }
+  .on .off{
+    display: none;
+  }
+  .on .on{
+    position: absolute;
+    font-weight: 700;
+    font-size: 25px;
+    top: -120%;
+    left: 50%;
+    color: red;
+  }

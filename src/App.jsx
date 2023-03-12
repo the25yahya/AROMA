@@ -94,10 +94,10 @@ function App() {
   }
   //cart js////////////////
   const [cartItems, setCartItems] = useState([]);
-  const handleAddToCart = (item) => {
+  const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, item]);
+    console.log(cartItems);
   };
-  console.log(cartItems,'cart');
   /////////////////////
 switch (true){
     case showMain:
@@ -105,6 +105,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+               items={cartItems}
                 onCartClick={handleCartClick}
                 onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
@@ -129,6 +130,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+              items={cartItems}
                 onCartClick={handleCartClick}
                 onBrandsClick={handleBrandsClick}
                 onMainClick={handleMainClick}
@@ -137,7 +139,7 @@ switch (true){
                 onNewArrivalClick={handleNewArrivalClick}
                 onCasualClick={handleCasualClick}
               />
-              <Men onAddToCart={handleAddToCart}/>
+              <Men addToCart={addToCart}/>
               <Footer />
             </div>
         );
@@ -146,6 +148,7 @@ switch (true){
           <div className='container'>
             <Discount />
             <Nav 
+            items={cartItems}
              onCartClick={handleCartClick}
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
@@ -154,7 +157,8 @@ switch (true){
             onNewArrivalClick={handleNewArrivalClick}
             onCasualClick={handleCasualClick}
             />
-            <Women />
+            <Women 
+              addToCart={addToCart}/>
             <Footer />
         </div>
         ); 
@@ -162,7 +166,8 @@ switch (true){
         return(
           <div className='container'>
             <Discount />
-            <Nav 
+            <Nav  
+            items={cartItems}
             onCartClick={handleCartClick}   
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
@@ -171,7 +176,8 @@ switch (true){
             onNewArrivalClick={handleNewArrivalClick}
             onCasualClick={handleCasualClick}
             />
-            <NewArrival />
+            <NewArrival
+            addToCart={addToCart}/>
             <Footer />
           </div>
         );
@@ -180,6 +186,7 @@ switch (true){
           <div className='container'>
             <Discount />
             <Nav 
+             items={cartItems}
             onCartClick={handleCartClick}
             onBrandsClick={handleBrandsClick}
             onMainClick={handleMainClick}
@@ -188,7 +195,8 @@ switch (true){
             onNewArrivalClick={handleNewArrivalClick}
             onCasualClick={handleCasualClick}
             />
-            <Casual />
+            <Casual 
+              addToCart={addToCart}/>
             <Footer />
           </div>
         );
@@ -197,6 +205,7 @@ switch (true){
         <div className='container'>
         <Discount />
         <Nav 
+         items={cartItems}
         onCartClick={handleCartClick}
         onBrandsClick={handleBrandsClick}
         onMainClick={handleMainClick}
@@ -205,7 +214,9 @@ switch (true){
         onNewArrivalClick={handleNewArrivalClick}
         onCasualClick={handleCasualClick}
         />
-        <Brands />
+        <Brands 
+          addToCart={addToCart}
+        />
         <Footer />
       </div>
        ); 
@@ -214,6 +225,7 @@ switch (true){
             <div className='container'>
               <Discount />
               <Nav 
+               items={cartItems}
               onCartClick={handleCartClick}
               onBrandsClick={handleBrandsClick}
               onMainClick={handleMainClick}
