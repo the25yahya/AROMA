@@ -62,7 +62,7 @@ function Main(props){
                 src={summer}
               />
               <p className='intro'>level up your style with our    <span>summer collection</span></p>
-              <button>shop now <img id='next' src={next} /></button>
+              <button onClick={handleNewArrivalAndScrollTop}>shop now <img id='next' src={next} /></button>
               <div className='left-right'>
                 <button></button>
                 <button></button>
