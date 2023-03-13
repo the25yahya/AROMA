@@ -8,6 +8,8 @@
     flex-direction: column;
 }
 .discount{
+    position: fixed;
+    z-index: 200;
     text-align: center;
     padding-top: 10px;
     width: 100%;

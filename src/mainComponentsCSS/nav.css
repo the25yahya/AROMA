@@ -2,7 +2,13 @@ nav{
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    margin-top: 43px;
+    margin-bottom: 30px;
+    background: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 200;
+  width: 100%;
 }
 .dropdown{
     animation: dropdownExpand 0.3s ease-out;
