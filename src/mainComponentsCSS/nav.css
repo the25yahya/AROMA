@@ -3,10 +3,10 @@ nav{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    margin-top: 43px;
+    margin-top: 41px;
     margin-bottom: 30px;
     background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   z-index: 200;
   width: 100%;
 }
@@ -60,6 +60,7 @@ nav{
   }
 .toggle{
     display: none;
+    margin-right: 50px;
 }
 
 .title{
@@ -146,6 +147,9 @@ nav{
     }
 }
 @media (max-width:550px) {
+  nav{
+    margin-top: 35px;
+  }
     nav .title{
         margin-left: 0px;
     }
