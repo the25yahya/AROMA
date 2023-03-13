@@ -10,22 +10,10 @@ import LevisData from '../json-files/brands/levis.json';
 
 
 
-const NikeArray = NikeData.map((item)=>{
-  return(
-    <Product 
-    addToCart={props.addToCart} 
-    key={item.id} 
-    img1={item.img1}
-    tag={item.tag}
-    name={item.name}
-    price={item.price}
-    img2={item.img2}
-    img3={item.img3}
-    img4={item.img4}
- />
-    )
-  })   
-  const AllArray = AllData.map((item)=>{
+
+/////////////////////////////////////////////////////////////////////////////////////
+function Brands(props){
+  const NikeArray = NikeData.map((item)=>{
     return(
       <Product 
       addToCart={props.addToCart} 
@@ -39,23 +27,24 @@ const NikeArray = NikeData.map((item)=>{
       img4={item.img4}
    />
       )
-    })
-
-    const AddidasArray = AddidasData.map((item)=>{
+    })   
+    const AllArray = AllData.map((item)=>{
       return(
-          <Product 
-          addToCart={props.addToCart} 
-             key={item.id} 
-             img1={item.img1}
-             img2={item.img2}
-             tag={item.tag}
-             name={item.name}
-             price={item.price}
-          />
+        <Product 
+        addToCart={props.addToCart} 
+        key={item.id} 
+        img1={item.img1}
+        tag={item.tag}
+        name={item.name}
+        price={item.price}
+        img2={item.img2}
+        img3={item.img3}
+        img4={item.img4}
+     />
         )
       })
-
-      const GucciArray = GucciData.map((item)=>{
+  
+      const AddidasArray = AddidasData.map((item)=>{
         return(
             <Product 
             addToCart={props.addToCart} 
@@ -68,8 +57,8 @@ const NikeArray = NikeData.map((item)=>{
             />
           )
         })
-
-        const LevisArray = LevisData.map((item)=>{
+  
+        const GucciArray = GucciData.map((item)=>{
           return(
               <Product 
               addToCart={props.addToCart} 
@@ -81,12 +70,12 @@ const NikeArray = NikeData.map((item)=>{
                  price={item.price}
               />
             )
-          }) 
-
-          const BalenciagaArray = BalenciagaData.map((item)=>{
+          })
+  
+          const LevisArray = LevisData.map((item)=>{
             return(
-                <Product
-                 addToCart={props.addToCart} 
+                <Product 
+                addToCart={props.addToCart} 
                    key={item.id} 
                    img1={item.img1}
                    img2={item.img2}
@@ -95,9 +84,21 @@ const NikeArray = NikeData.map((item)=>{
                    price={item.price}
                 />
               )
-            })
-/////////////////////////////////////////////////////////////////////////////////////
-function Brands(props){
+            }) 
+  
+            const BalenciagaArray = BalenciagaData.map((item)=>{
+              return(
+                  <Product
+                   addToCart={props.addToCart} 
+                     key={item.id} 
+                     img1={item.img1}
+                     img2={item.img2}
+                     tag={item.tag}
+                     name={item.name}
+                     price={item.price}
+                  />
+                )
+              })
     const [showAll, setShowAll] = useState(true);
     const [showGucci, setShowGucci] = useState(false);
     const [showBalenciaga, setShowBalenciaga] = useState(false);
